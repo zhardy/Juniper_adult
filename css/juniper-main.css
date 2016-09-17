@@ -1,0 +1,264 @@
+/*!
+ * Start Bootstrap - Modern Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+    
+}
+
+.carousel-indicators li { visibility: hidden; }
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+p {
+    font-size: 110%; /* Needs to be 110. Figure out a way of making everything on faculty page 110% */
+}
+
+
+.social-symbols{
+    text-align:center;
+}
+
+p.list-content{
+    font-size:100%;
+}
+
+/* Home Page Carousel */
+
+/*
+/ To do
+*/
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
+}
+
+/* Header styles */
+h1{
+    display:inline-block;
+}
+h4{
+    display:inline;
+}
+
+.header{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-header{
+    text-align:center;
+}
+
+
+/* Image styles */
+
+
+img.image{
+    display:block;
+    outline-color:black;
+    outline-style:solid;
+    outline-width: thin;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:2%;
+}
+
+
+img.left, blockquote.left {
+    float:left;
+    margin-right: 5%;
+}
+
+img.right, blockquote.right{
+    float:right;
+    margin-left:5%;
+}
+
+
+img.header{
+    height:450px;
+    width:750px;
+}
+
+img.curriculum{
+    height:250px;
+    width:300px;
+    margin-bottom: 5%;
+}
+
+
+
+/* Quotes styles */
+
+blockquote{
+    background-color: #f2f2f2;
+    border-left-style: none;
+    padding: 5px;
+    font-style: italic;
+    font-size: 107%;
+    text-align: center;
+}
+
+blockquote.apply{
+    width:40%;
+}
+
+.long{
+    font-size: 100%;
+    padding-bottom: 0;
+}
+/* Sidebar style */
+
+.scroll {
+    overflow-x:hidden;
+    overflow-y: scroll;
+    height:40%;
+}
+
+.fixed {
+    position: fixed;
+}
+
+/* sidebar */
+.bs-docs-sidebar {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* all links */
+.bs-docs-sidebar .nav>li>a {
+    color: #999;
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* nested links */
+.bs-docs-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+}
+
+/* active & hover links */
+
+.bs-docs-sidebar .nav>li>a:hover
+ {
+    color: #563d7c;                 
+    text-decoration: none;          
+    background-color: transparent;  
+    border-left-color: #563d7c; 
+}
+/* all active links */
+.bs-docs-sidebar .nav>.active:hover>a
+ {
+    font-weight: 700;
+}
+/* nested active links */
+ 
+.bs-docs-sidebar .nav .nav>.active:hover>a
+ {
+    font-weight: 500;
+}
+
+.again{
+    padding-left: 10px;
+}
+
+
+.nominate-list
+{
+    list-style-type: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* Section */
+
+section{
+    padding-top: 3%;
+    padding-bottom:3%;
+}
+
+
+@media(max-width: 1365px){
+    #sidebar {
+        display: none;
+    }
+    .scroll {
+        display: none;
+    }
+        img.sidebar-logo {
+        display: none;
+    }
+}
+
+@media(max-width: 430px) {
+ /*   .navbar-brand > img.sidebar-logo {
+        display: none;
+    }*/
+    .navbar-brand > .name{
+        display: none;
+    }
+}
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}
+
+.navbar-fixed-top{
+    background-color:black;
+    color:red;
+}
+
+img.sidebar-logo{
+    display:inline;
+    height:35px;
+    width:80px;
+}
+
+
+
+
+.apply-button:hover {
+    color:red !important;
+
+}
+
+.name {
+    display:inline;
+}
