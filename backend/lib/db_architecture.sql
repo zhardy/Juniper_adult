@@ -1,10 +1,20 @@
 drop table if exists Users CASCADE;
 drop table if exists Passwords CASCADE;
-drop table if exists sources CASCADE;
-drop table if exists usersSubscribedSources CASCADE;
-drop table if exists usersSubscribedFeeder CASCADE;
-drop table if exists settings CASCADE;
-drop table if exists filters CASCADE;
+drop table if exists Writers CASCADE;
+drop table if exists CraftSessions CASCADE;
+drop table if exists Readings CASCADE;
+drop table if exists Workshops CASCADE;
+drop table if exists Content CASCADE;
+drop table if exists Images CASCADE;
+drop table if exists Sponsors CASCADE;
+drop table if exists UserToPassword CASCADE;
+drop table if exists WritersToDetails CASCADE;
+drop table if exists WritersToCraftSessions CASCADE;
+drop table if exists WritersToReadings CASCADE;
+drop table if exists WritersToWorkshops CASCADE;
+drop table if exists CraftSessionsToContent CASCADE;
+drop table if exists WorkshopsToContent CASCADE;
+drop table if exists SponsorToDetails CASCADE;
 
 create table Users (
   Username varchar(50),
@@ -13,8 +23,8 @@ create table Users (
 );
 
 create table Passwords (
-  PasswordID int,
-  Password varchar
+  PasswordID serial,
+  Password varchar,
 	primary key (PasswordID)
 );
 
@@ -39,7 +49,7 @@ create table Readings (
 create table Workshops (
   WorkshopID SERIAL,
   Name varchar,
-  primary key (WorkshopID),
+  primary key (WorkshopID)
 );
 
 create table Content (
@@ -96,7 +106,7 @@ create table WritersToReadings(
   WriterID int,
   ReadingID int,
   foreign key (WriterID) references Writers,
-  foreign key (ReadingID) references Readings
+  foreign key (ReadingID) references Readings,
   primary key (WritersToReadingID)
 );
 
@@ -123,7 +133,7 @@ create table WorkshopsToContent(
   ContentID int,
   WorkshopID int,
   foreign key (ContentID) references Content,
-  foreign key (WorkshopID) references WorkshopID,
+  foreign key (WorkshopID) references Workshops,
   primary key (WorkshopToContentID)
 );
 
@@ -132,6 +142,6 @@ create table SponsorToDetails(
   ContentID int,
   ImageID int,
   foreign key (ContentID) references Content,
-  foreign key (ImageID) references Image,
+  foreign key (ImageID) references Images,
   primary key (SponsorToDetailID)
 );
