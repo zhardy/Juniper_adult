@@ -30,6 +30,7 @@ create table Passwords (
 
 create table Writers (
   WriterID SERIAL,
+  WriterName varchar,
   WriterType varchar,
   primary key (WriterID)
 );
@@ -48,7 +49,7 @@ create table Readings (
 
 create table Workshops (
   WorkshopID SERIAL,
-  Name varchar,
+  WorkshopName varchar,
   primary key (WorkshopID)
 );
 
