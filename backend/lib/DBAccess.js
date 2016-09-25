@@ -56,9 +56,10 @@ function createImage(ImagePath){
 			.into("Images")
 			.set("ImagePath", ImagePath)
 			.returning('ImageID');
+	console.log(pictureInsert.toParam())
 	when.all([
 		query(pictureInsert),
-		]).spread(
+		]).then(
 			function(results){
 				return results[0].imageid;
 			}
@@ -81,17 +82,23 @@ function createContent(Content){
 		);
 }
 
-function selectWriterID(Name){	
+function selectWriterID(Name, callback){	
 	var selectIDName = squel.select()
 						.from("Writers")
 						.field("WriterID")
 						.where("WriterName = ?", Name);
-	when.all([
+	return when.all([
 		query(selectIDName)
-		]).spread(
+		])/*.resolve(
 		function(results){
-			return results[0].writerid;
-		});
+			return 'test';
+		}) */
 }
-selectWriterID("test");
 
+function onResolve(something){
+	console.log(something);
+}
+
+SetWriterDetails("'drop tables;","'drop tables;","'drop tables;","'drop tables;", "'drop tables;");
+var test = 'nothing';
+selectWriterID('test').then(onResolve);
