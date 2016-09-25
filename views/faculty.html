@@ -1,262 +1,268 @@
-<div class="row">
-    <div class="col-lg-12" style="text-align:center">
-        <h1 class="page-header">Faculty &amp; Writers in Residence</h1>
+<div ng-controller="FacultyController">
+
+    <div class="row">
+        <div class="col-lg-12" style="text-align:center">
+            <h1 class="page-header">Faculty &amp; Writers in Residence</h1>
+        </div>
     </div>
-</div>
-
-<!-- /.row -->
-
-<div class="row">
-    <div class="col-lg-12">
-        <h2 class="page-header">Poetry Faculty</h2>
-    </div>
-    <div class="col-lg-3 text-center">
-        <img  src="./images/faculty/heather_2015.jpg" class="image img-responsive">
-    </div>
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Heather Christle</h3> Heather Christle is the author of four poetry collections, including <em>The Trees The Trees</em>, which won the Believer Poetry Award; <em>What Is Amazing</em>, a Massachusetts Book Award "Must-Read"; and, most recently, <em>Heliopause</em>. A contributing editor for <em>jubilat</em>, she also co-edits the PEN Poetry Series. She has taught writing at Antioch College, Sarah Lawrence College, Emory University, and the University of Massachusetts Amherst, where she received her MFA. A native of Wolfeboro, New Hampshire, she currently lives in Yellow Springs, Ohio, where she is writing a book about crying. You can read an interview with her <a href="http://www.believermag.com/issues/201209/?read=interview_christle">here</a>, or learn more on her <a href="http://heatherchristle.tumblr.com/">Tumblr</a>.</p><br>
-    </div>
-</div>
+    <h1>  {{WritersArray}}  </h1>
 
 
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Poetry Faculty</h2>
+        </div>
 
-
-<br><br><br>
-
-
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/emily_2015.jpg" class="image img-responsive">
-    </div>
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Emily Pettit</h3> Emily Pettit is the author of <em>Goat in the Snow</em>.  She is a writer, visual artist, teacher, and an editor for Factory Hollow Press and <em>jubilat</em> She teaches at Elms College. Read some recent poems <a href="http://clinicpresents.com/emily-pettit-two-poems/">here</a>  or check out her <a href="http://goatinthesnow.tumblr.com/">Tumblr</a>.</p><br>
-    </div>
-</div>
-
-<br><br><br>
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/zach_2015.jpg" class="image img-responsive">
-    </div>
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Zachary Schomburg</h3> Zachary Schomburg is the author of four books of poems including, most recently, <em>The Book of Joshua </em>(Black Ocean 2014). He co-edits Octopus Books and co-curates the Bad Blood readings series from where he lives in Portland, OR. He also is an illustrator and a novelist. Read a <a href="http://www.publishersweekly.com/978-1-939568-06-9">review</a> of his latest book of poems, and visit his website <a href="http://www.zacharyschomburg.net/">here</a>.</p><br>
-    </div>
-</div>
-
-
-<br><br><br>
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/evie_2015.jpg" class="image img-responsive">
-    </div>
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Evie Shockley</h3> Evie Shockley is the author of four collections of poetry-including <em>the new black</em>, winner of the 2012 Hurston/Wright Legacy Award in Poetry, and <em>a half-red sea</em>—and a critical study, <em>Renegade Poetics: Black Aesthetics and Formal Innovation in African American Poetry</em>. She is currently serving as creative editor on the <em>Feminist Studies</em> editorial collective, and is Associate Professor of English at Rutgers University. You can read her work <a href="http://www.poets.org/poetsorg/poem/du-bois-ghana">here</a> and <a href="http://lithub.com/politics-and-tough-love/">here</a></p><br>
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col-lg-12">
-        <h2 class="page-header">Non-Fiction Faculty</h2>
+            <div ng-repeat="writer in writers">
+            <div class="col-lg-3 text-center">
+                <img ng-src="{{writer.path}}" class="image img-responsive" >
+            </div>
+            <div class="col-lg-9" class="left-align" ng-bind-html="writer.bio">
+            
+    <br>
+            </div>
+        </div>
     </div>
 
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/paul_2015.jpg" class="image img-responsive">
-    </div>
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Paul Lisicky</h3> Paul Lisicky is the author of the memoirs, <em>The Narrow Door</em> and <em>Famous Builder</em>, the novels <em>Lawnboy</em> and <em>The Burning House</em>, and <em>Unbuilt Projects</em>, a collection of short prose. He is the recipient of awards from the National Endowment for the Arts, the James Michener/Copernicus Society, and the Fine Arts Work Center in Provincetown. He has twice been a finalist for the Lambda Literary Award. He teaches in the MFA Program at Rutgers University-Camden, and in the low residency program at Sierra Nevada College. You can read his work <a href="http://theoffingmag.com/essay/days-and-nights-of-candlewood/">here</a> and <a href="http://theoffingmag.com/essay/the-new-rhoda/">here</a>.</p><br>
-    </div>
-</div>
 
 
-<div class="row">
-    <div class="col-lg-12">
-        <h2 class="page-header">Fiction Faculty</h2>
-    </div>
-
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/noy_2015.jpg" class="image img-responsive">
-    </div>
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Noy Holland</h3>Noy Holland's novels include <em>Palisade</em> (Counterpoint) and, most recently, <em>Bird: A Novel</em> (Counterpoint 2015). Her collections of short fiction and novellas include <em>Swim for the Little One First</em> (FC2), <em>What Begins with Bird</em> (FC2), <em>The Spectacle of the Body (Knopf)</em>. She has published work in <em>The Kenyon Review</em>, <em>Conjunctions</em>, <em>The Quarterly</em>, <em>Glimmer Train</em>, <em>Milan Review</em>, <em>Western Humanities Review</em>, <em>The Believer</em>, <em>NOON</em>, and <em>New York Tyrant</em>, among others. She was a recipient of a Massachusetts Cultural Council award for artistic merit and a National Endowment for the Arts Fellowship. She has taught for many years in the MFA Program for Poets and Writers at the University of Massachusetts, as well as at Phillips Andover and the University of Florida. She serves on the board of directors at Fiction Collective Two. Visit her <a href="http://www.noyholland.com/">website</a> or read a <a href="http://www.conjunctions.com/webcon/holland12.htm">story.</a></p><br>
-    </div>
-</div>
-
-<br><br><br>
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/mitchell_2015.jpg" class="image img-responsive">
-    </div>
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Mitchell S. Jackson</h3> Mitchell S. Jackson's debut novel <em>The Residue Years</em> was praised by publications including <em>The New York Times</em>, <em>The Paris Review</em>, <em>The Times of London</em>, and <em>The Sydney Morning Herald</em>. The novel was honored with the Ernest Gaines Award for Literary Excellence and was a finalist for the Center For Fiction’s Flaherty-Dunnan First Novel Prize, the PEN/ Hemingway Award For First Fiction, and the Hurston / Wright Legacy Award. Jackson has received fellowships from the Lannan Foundation, The Center For Fiction, and the Bread Loaf Writers’ Conference. He teaches writing at New York University and Columbia University. Read some of his <a href="http://www.vice.com/read/oversoul-0000213-v19n6">work</a> or an <a href="http://www.theparisreview.org/blog/2014/01/30/visible-man-an-interview-with-mitchell-s-jackson/">interview</a>.</p><br>
-    </div>
-</div>
-
-<br><br><br>
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/joy_2015.jpg" class="image img-responsive">
-    </div>
-
-    <div class="col-lg-9" class="left-align">
-        <br><br>
-        <p><h3 class="inline">Joy Williams</h3> Joy Williams is the author of four collections of stories including, most recently, <em>The Visiting Privilege</em>. She has also published four novels, including <em>The Quick and the Dead</em>, which was a finalist for the Pulitzer Prize, and a book of essays, <em>Ill Nature</em>, which was a finalist for the National Book Critics Circle Award. Among her many honors are the Rea Award for the short story and the Strauss Living Award from the American Academy of Arts and Letters. She has taught at the Universities of Houston, Florida, Iowa, and Arizona. Read a <a href="http://theoffingmag.com/fiction/souvenir/">story</a> or a profile from <a href="http://www.nytimes.com/2015/09/06/magazine/the-misanthropic-genius-of-joy-williams.html?_r=0"><em>The New York Times Magazine</em></a>.</p><br>
-    </div>
-</div>
-
-<br><br><br>
-<div class="row">
-    <div class="col-lg-12">
-        <h2 class="page-header">Writers in Residence</h2>
-    </div>
-<br><br><br>
-
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/brian_2016.jpg" class="image img-responsive">
-    </div>
-
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Brian Baldi</h3> Brian Baldi's fiction, poetry, and nonfiction have appeared in <em>Massachusetts Review</em>, <em>Denver Quarterly</em>, <em>ZYZZYVA</em>, <em>Fairy Tale Review</em>, <em>Fourteen Hills</em>, “Brothers and Beasts: An Anthology of Men on Fairy Tales” (Wayne State University Press), "Monsters: A Collection of Literary Sightings (Pressgang), and “Best of the Web 2010” (Dzanc Books). Read his fiction <a href="http://0-literature.proquest.com.fama.us.es/searchFulltext.do?id=R03949609&divLevel=0&area=abell&forward=critref_ft">here</a>, or a poem <a href="http://0-literature.proquest.com.fama.us.es/searchFulltext.do?id=R04984494&divLevel=0&area=abell&forward=critref_ft">here</a>.</p>
-
-    </div>
-</div>
-
-<br><br><br>
-
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/jensen_2015.jpeg" class="image img-responsive">
-    </div>
-
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Jensen Beach</h3> Jensen Beach is the author of the collection <em>For Out of the Heart Proceed</em>. His work has appeared in <em>A Public Space</em>, <em>the New Yorker</em>, <em>Ninth Letter</em>, <em>Tin House</em>, and elsewhere. He teaches in the BFA program at Johnson State College and lives in Vermont with his family.</p>
-
-    </div>
-</div>
-
-<br><br><br>
-
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/jack_2016.JPG" class="image img-responsive">
-    </div>
-
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Jack Christian</h3> Jack Christian is the author of <em>Family System</em>, which won the 2012 Colorado Poetry Prize (Center for Literary Publishing: U Press of Colorado). Recent work has appeared in <em>Green Mountains Review</em>, <em>Carolina Quarterly</em>, and <em>Web Conjunctions</em>. He teaches creative writing and first-year composition at Westfield State University in Westfield, Massachusetts.</p>
-
-    </div>
-</div>
-
-<br><br><br>
-
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/christy_2016.JPG" class="image img-responsive">
-    </div>
-
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Christy Crutchfield</h3> Christy Crutchfield is the author of the novel <em>How to Catch a Coyote</em>.  Her work has appeared in <em>Tin House</em>, <em>Mississippi Review</em>, <em>Salt Hill Journal</em>, <em>PANK</em>, and others.  She writes and teaches in Western Massachusetts.</p>
-
-    </div>
-</div>
 
     <br><br><br>
 
 
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/chris_2015.jpg" class="image img-responsive"></img>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/emily_2015.jpg" class="image img-responsive">
+        </div>
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Emily Pettit</h3> Emily Pettit is the author of <em>Goat in the Snow</em>.  She is a writer, visual artist, teacher, and an editor for Factory Hollow Press and <em>jubilat</em> She teaches at Elms College. Read some recent poems <a href="http://clinicpresents.com/emily-pettit-two-poems/">here</a>  or check out her <a href="http://goatinthesnow.tumblr.com/">Tumblr</a>.</p><br>
+        </div>
     </div>
 
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Chris Dombrowski</h3> Chris Dombrowski's first book of nonfiction, <em>Body of Water</em>, is forthcoming from Milkweed Editions in 2016. He is also the author of two full-length collections of poetry, <em>By Cold Water</em>, a Poetry Foundation Bestseller, and <em>Earth Again</em>, runner-up for ForeWord Magazine's Book of the Year in Poetry (Wayne State University Press).  His work has appeared in <em>Poetry</em>, <em>Gulf Coast</em>, <em>Crazyhorse</em>, <em>Orion</em>, <em>Outside</em>, and <em>The Sun</em>, and has been the recipient of numerous awards and fellowships.  He has taught creative writing at the University of Montana and Interlochen Center for the Arts, and currently directs the 406 Writers' Workshop and Beargrass Writing Retreat, both based in Missoula, Montana. Read an <a href="http://thesunmagazine.org/author/chris_dombrowski">essay</a> or a <a href="http://joewilkins.org/2013/06/30/read-this-chris-dombrowskis-earth-again/">review</a> of his book of poems <em>Earth Again</em>.</p>
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/zach_2015.jpg" class="image img-responsive">
+        </div>
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Zachary Schomburg</h3> Zachary Schomburg is the author of four books of poems including, most recently, <em>The Book of Joshua </em>(Black Ocean 2014). He co-edits Octopus Books and co-curates the Bad Blood readings series from where he lives in Portland, OR. He also is an illustrator and a novelist. Read a <a href="http://www.publishersweekly.com/978-1-939568-06-9">review</a> of his latest book of poems, and visit his website <a href="http://www.zacharyschomburg.net/">here</a>.</p><br>
+        </div>
+    </div>
+
+
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/evie_2015.jpg" class="image img-responsive">
+        </div>
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Evie Shockley</h3> Evie Shockley is the author of four collections of poetry-including <em>the new black</em>, winner of the 2012 Hurston/Wright Legacy Award in Poetry, and <em>a half-red sea</em>—and a critical study, <em>Renegade Poetics: Black Aesthetics and Formal Innovation in African American Poetry</em>. She is currently serving as creative editor on the <em>Feminist Studies</em> editorial collective, and is Associate Professor of English at Rutgers University. You can read her work <a href="http://www.poets.org/poetsorg/poem/du-bois-ghana">here</a> and <a href="http://lithub.com/politics-and-tough-love/">here</a></p><br>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Non-Fiction Faculty</h2>
+        </div>
+
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/paul_2015.jpg" class="image img-responsive">
+        </div>
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Paul Lisicky</h3> Paul Lisicky is the author of the memoirs, <em>The Narrow Door</em> and <em>Famous Builder</em>, the novels <em>Lawnboy</em> and <em>The Burning House</em>, and <em>Unbuilt Projects</em>, a collection of short prose. He is the recipient of awards from the National Endowment for the Arts, the James Michener/Copernicus Society, and the Fine Arts Work Center in Provincetown. He has twice been a finalist for the Lambda Literary Award. He teaches in the MFA Program at Rutgers University-Camden, and in the low residency program at Sierra Nevada College. You can read his work <a href="http://theoffingmag.com/essay/days-and-nights-of-candlewood/">here</a> and <a href="http://theoffingmag.com/essay/the-new-rhoda/">here</a>.</p><br>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Fiction Faculty</h2>
+        </div>
+
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/noy_2015.jpg" class="image img-responsive">
+        </div>
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Noy Holland</h3>Noy Holland's novels include <em>Palisade</em> (Counterpoint) and, most recently, <em>Bird: A Novel</em> (Counterpoint 2015). Her collections of short fiction and novellas include <em>Swim for the Little One First</em> (FC2), <em>What Begins with Bird</em> (FC2), <em>The Spectacle of the Body (Knopf)</em>. She has published work in <em>The Kenyon Review</em>, <em>Conjunctions</em>, <em>The Quarterly</em>, <em>Glimmer Train</em>, <em>Milan Review</em>, <em>Western Humanities Review</em>, <em>The Believer</em>, <em>NOON</em>, and <em>New York Tyrant</em>, among others. She was a recipient of a Massachusetts Cultural Council award for artistic merit and a National Endowment for the Arts Fellowship. She has taught for many years in the MFA Program for Poets and Writers at the University of Massachusetts, as well as at Phillips Andover and the University of Florida. She serves on the board of directors at Fiction Collective Two. Visit her <a href="http://www.noyholland.com/">website</a> or read a <a href="http://www.conjunctions.com/webcon/holland12.htm">story.</a></p><br>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/mitchell_2015.jpg" class="image img-responsive">
+        </div>
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Mitchell S. Jackson</h3> Mitchell S. Jackson's debut novel <em>The Residue Years</em> was praised by publications including <em>The New York Times</em>, <em>The Paris Review</em>, <em>The Times of London</em>, and <em>The Sydney Morning Herald</em>. The novel was honored with the Ernest Gaines Award for Literary Excellence and was a finalist for the Center For Fiction’s Flaherty-Dunnan First Novel Prize, the PEN/ Hemingway Award For First Fiction, and the Hurston / Wright Legacy Award. Jackson has received fellowships from the Lannan Foundation, The Center For Fiction, and the Bread Loaf Writers’ Conference. He teaches writing at New York University and Columbia University. Read some of his <a href="http://www.vice.com/read/oversoul-0000213-v19n6">work</a> or an <a href="http://www.theparisreview.org/blog/2014/01/30/visible-man-an-interview-with-mitchell-s-jackson/">interview</a>.</p><br>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/joy_2015.jpg" class="image img-responsive">
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+            <br><br>
+            <p><h3 class="inline">Joy Williams</h3> Joy Williams is the author of four collections of stories including, most recently, <em>The Visiting Privilege</em>. She has also published four novels, including <em>The Quick and the Dead</em>, which was a finalist for the Pulitzer Prize, and a book of essays, <em>Ill Nature</em>, which was a finalist for the National Book Critics Circle Award. Among her many honors are the Rea Award for the short story and the Strauss Living Award from the American Academy of Arts and Letters. She has taught at the Universities of Houston, Florida, Iowa, and Arizona. Read a <a href="http://theoffingmag.com/fiction/souvenir/">story</a> or a profile from <a href="http://www.nytimes.com/2015/09/06/magazine/the-misanthropic-genius-of-joy-williams.html?_r=0"><em>The New York Times Magazine</em></a>.</p><br>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Writers in Residence</h2>
+        </div>
+    <br><br><br>
+
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/brian_2016.jpg" class="image img-responsive">
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Brian Baldi</h3> Brian Baldi's fiction, poetry, and nonfiction have appeared in <em>Massachusetts Review</em>, <em>Denver Quarterly</em>, <em>ZYZZYVA</em>, <em>Fairy Tale Review</em>, <em>Fourteen Hills</em>, “Brothers and Beasts: An Anthology of Men on Fairy Tales” (Wayne State University Press), "Monsters: A Collection of Literary Sightings (Pressgang), and “Best of the Web 2010” (Dzanc Books). Read his fiction <a href="http://0-literature.proquest.com.fama.us.es/searchFulltext.do?id=R03949609&divLevel=0&area=abell&forward=critref_ft">here</a>, or a poem <a href="http://0-literature.proquest.com.fama.us.es/searchFulltext.do?id=R04984494&divLevel=0&area=abell&forward=critref_ft">here</a>.</p>
+
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/jensen_2015.jpeg" class="image img-responsive">
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Jensen Beach</h3> Jensen Beach is the author of the collection <em>For Out of the Heart Proceed</em>. His work has appeared in <em>A Public Space</em>, <em>the New Yorker</em>, <em>Ninth Letter</em>, <em>Tin House</em>, and elsewhere. He teaches in the BFA program at Johnson State College and lives in Vermont with his family.</p>
+
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/jack_2016.JPG" class="image img-responsive">
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Jack Christian</h3> Jack Christian is the author of <em>Family System</em>, which won the 2012 Colorado Poetry Prize (Center for Literary Publishing: U Press of Colorado). Recent work has appeared in <em>Green Mountains Review</em>, <em>Carolina Quarterly</em>, and <em>Web Conjunctions</em>. He teaches creative writing and first-year composition at Westfield State University in Westfield, Massachusetts.</p>
+
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/christy_2016.JPG" class="image img-responsive">
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Christy Crutchfield</h3> Christy Crutchfield is the author of the novel <em>How to Catch a Coyote</em>.  Her work has appeared in <em>Tin House</em>, <em>Mississippi Review</em>, <em>Salt Hill Journal</em>, <em>PANK</em>, and others.  She writes and teaches in Western Massachusetts.</p>
+
+        </div>
+    </div>
+
+        <br><br><br>
+
+
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/chris_2015.jpg" class="image img-responsive"></img>
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Chris Dombrowski</h3> Chris Dombrowski's first book of nonfiction, <em>Body of Water</em>, is forthcoming from Milkweed Editions in 2016. He is also the author of two full-length collections of poetry, <em>By Cold Water</em>, a Poetry Foundation Bestseller, and <em>Earth Again</em>, runner-up for ForeWord Magazine's Book of the Year in Poetry (Wayne State University Press).  His work has appeared in <em>Poetry</em>, <em>Gulf Coast</em>, <em>Crazyhorse</em>, <em>Orion</em>, <em>Outside</em>, and <em>The Sun</em>, and has been the recipient of numerous awards and fellowships.  He has taught creative writing at the University of Montana and Interlochen Center for the Arts, and currently directs the 406 Writers' Workshop and Beargrass Writing Retreat, both based in Missoula, Montana. Read an <a href="http://thesunmagazine.org/author/chris_dombrowski">essay</a> or a <a href="http://joewilkins.org/2013/06/30/read-this-chris-dombrowskis-earth-again/">review</a> of his book of poems <em>Earth Again</em>.</p>
+        </div>
+    </div>
+
+
+    <br><br><br><br>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/arthur_2015.jpg" class="image img-responsive">
+        </div>
+
+
+        <div class="col-lg-9" class="left-align">
+            
+            <p><h3 class="inline">Arthur Flowers</h3> Arthur Flowers, a native of Memphis, is the author of novels, nonfiction and graphic works including <em>Another Good Loving Blues</em>, <em>Mojo Rising - Confessions of a 21st Century Conjureman</em>, and <em>I See The Promised Land</em>. He is a blues-based performance poet in the griotic school of African American literature, a practitioner of literary hoodoo, former Executive Director of the Harlem Writers Guild, and cofounder of the New Ren Writers Guild. He is webmaster of Rootwork.com and Rootsblog, and teaches MFA Fiction at Syracuse University. Listen to him <a href="https://www.youtube.com/watch?v=E9uE9-4xmtM">read</a>  or read an <a href="http://wordswithwriters.com/2011/06/04/arthur-flowers/">interview</a>.</p><br>
+        </div>
+    </div>
+
+
+    <br><br><br><br>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/lauren_2016.jpg" class="image img-responsive">
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+            
+            <p><h3 class="inline">Lauren Foss Goodman</h3> Lauren Foss Goodman is the author of <em>A Heart Beating Hard</em>, one of the debut novels for 21st Century Prose, a new fiction imprint at the University of Michigan Press.  Her work has appeared in <em>The Massachusetts Review</em>, <em>PANK</em>, <em>Sou'wester</em>, <em>Hayden's Ferry Review</em>, and elsewhere.  She was the 2009 winner of Boulevard's Short Fiction Contest for Emerging Writers.  Lauren lives in Western Massachusetts, where she is the Director of Teaching and Learning at Berkshire Community College.  Find her online at <a href="http://www.laurenfossgoodman.com">www.laurenfossgoodman.com</a>.</p><br>
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/amelia_2015.jpg" class="image img-responsive">
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Amelia Gray</h3> Amelia Gray is the author of four books: <em>AM/PM</em>, <em>Museum of the Weird</em>, <em>THREATS</em>, and <em>Gutshot</em>. Her fiction and essays have appeared in <em>The New Yorker</em>, <em>The New York Times</em>, <em>The Wall Street Journal</em>, <em>Tin House</em>, and <em>VICE</em>. She lives in Los Angeles. Read her stories <a href="http://www.newyorker.com/magazine/2015/02/16/labyrinth-4">here</a> and <a href="http://www.thewhitereview.org/fiction/house-proud/">here</a>.</p><br>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="row">
+
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/eileen_2015.jpg" class="image img-responsive">
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Eileen Myles</h3>Eileen Myles is the author of nineteen books including <em>I Must Be Living Twice: New &amp;Selected Poems</em>, and a reissue of <em>Chelsea Girls</em>, both out in fall 2015, from Ecco/Harper Collins. She is the recipient of a Guggenheim Fellowship in non-fiction, a Clark Award for Excellence in Art Writing, an Andy Warhol/Creative Capital art writers' grant, a Lambda Book Award, the Shelley Prize from The Poetry Society of America, as well as being named to the Slate/Whiting Second Novel List. Currently she teaches at NYU and Naropa University and lives in Marfa TX and New York. Read selections of her <a href="http://eileenmyles.com/living-twice.php">poetry</a> and <a href="http://eileenmyles.com/chelsea.php">fiction</a>.
+            </p>
+        </div>
+    </div>
+
+
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/betsy_2015.jpg" class="image img-responsive">
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+            <p><h3 class="inline">Betsy Wheeler</h3> Betsy Wheeler is the author of the poetry collection <em>Loud Dreaming in a Quiet Room</em>, and the poetry chapbooks <em>Start Here</em>, and <em>Mental Detours</em>. She earned her MFA in poetry at The Ohio State University, and held the Stadler Fellowship at Bucknell University from 2005-2007. Managing Director of the Juniper Summer Writing Institute, she lives with her wife, Meghan, in Northampton, MA. Read some new poems <a href="http://bettermagazine.org/005/betsywheeler.html">here</a>,  or read an <a href="http://www.bucknell.edu/x81098.xml">interview</a>.</p><br>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/dara_2015.jpg" class="image img-responsive">
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+                  <p><h3 class="inline">Dara Wier</h3>Dara Wier's 2013 <em>You Good Thing</em> was a BELIEVER'S reader's choice; she edits for factory hollow press and teaches workshops and seminars for the University of Massachusetts Amherst's MFA for Poets and Writers. Read an <a href="http://ampersandreview.com/2014/06/a-quick-interview-with-dara-wier/">interview</a>  or visit her blog <a href="http://www.flying-object.org/flying-object/inside-undivided-26">INSIDE UNDIVIDED</a> , about writing and reading.</p><br>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <img src="./images/faculty/matthew_2015.jpg" class="image img-responsive">
+        </div>
+
+        <div class="col-lg-9" class="left-align">
+                  <p><h3 class='inline'>Matthew Zapruder</h3> Matthew Zapruder is the author of four collections of poetry, most recently <em>Come On All You Ghosts</em>, a New York Times Notable Book of the Year, and <em>Sun Bear</em>, Copper Canyon 2014. <em>Why Poetry</em>, a book of prose, is forthcoming from Ecco Press in 2016. He has received a Guggenheim Fellowship, a William Carlos Williams Award, a May Sarton Award from the Academy of American Arts and Sciences, and a Lannan Foundation Residency Fellowship in Marfa, TX. An Associate Professor in the St. Mary's College of California MFA program and English Department, he is also Editor at Large at Wave Books. He lives in Oakland, CA. Read his work <a href="http://www.poetryfoundation.org/bio/matthew-zapruder#about">here</a> or read an <a href="http://www.divedapper.com/interview/matthew-zapruder/">interview</a>.</p><br>
+        </div>
     </div>
 </div>
-
-
-<br><br><br><br>
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/arthur_2015.jpg" class="image img-responsive">
-    </div>
-
-
-    <div class="col-lg-9" class="left-align">
-        
-        <p><h3 class="inline">Arthur Flowers</h3> Arthur Flowers, a native of Memphis, is the author of novels, nonfiction and graphic works including <em>Another Good Loving Blues</em>, <em>Mojo Rising - Confessions of a 21st Century Conjureman</em>, and <em>I See The Promised Land</em>. He is a blues-based performance poet in the griotic school of African American literature, a practitioner of literary hoodoo, former Executive Director of the Harlem Writers Guild, and cofounder of the New Ren Writers Guild. He is webmaster of Rootwork.com and Rootsblog, and teaches MFA Fiction at Syracuse University. Listen to him <a href="https://www.youtube.com/watch?v=E9uE9-4xmtM">read</a>  or read an <a href="http://wordswithwriters.com/2011/06/04/arthur-flowers/">interview</a>.</p><br>
-    </div>
-</div>
-
-
-<br><br><br><br>
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/lauren_2016.jpg" class="image img-responsive">
-    </div>
-
-    <div class="col-lg-9" class="left-align">
-        
-        <p><h3 class="inline">Lauren Foss Goodman</h3> Lauren Foss Goodman is the author of <em>A Heart Beating Hard</em>, one of the debut novels for 21st Century Prose, a new fiction imprint at the University of Michigan Press.  Her work has appeared in <em>The Massachusetts Review</em>, <em>PANK</em>, <em>Sou'wester</em>, <em>Hayden's Ferry Review</em>, and elsewhere.  She was the 2009 winner of Boulevard's Short Fiction Contest for Emerging Writers.  Lauren lives in Western Massachusetts, where she is the Director of Teaching and Learning at Berkshire Community College.  Find her online at <a href="http://www.laurenfossgoodman.com">www.laurenfossgoodman.com</a>.</p><br>
-    </div>
-</div>
-
-
-
-<br><br><br>
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/amelia_2015.jpg" class="image img-responsive">
-    </div>
-
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Amelia Gray</h3> Amelia Gray is the author of four books: <em>AM/PM</em>, <em>Museum of the Weird</em>, <em>THREATS</em>, and <em>Gutshot</em>. Her fiction and essays have appeared in <em>The New Yorker</em>, <em>The New York Times</em>, <em>The Wall Street Journal</em>, <em>Tin House</em>, and <em>VICE</em>. She lives in Los Angeles. Read her stories <a href="http://www.newyorker.com/magazine/2015/02/16/labyrinth-4">here</a> and <a href="http://www.thewhitereview.org/fiction/house-proud/">here</a>.</p><br>
-    </div>
-</div>
-
-<br><br><br>
-<div class="row">
-
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/eileen_2015.jpg" class="image img-responsive">
-    </div>
-
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Eileen Myles</h3>Eileen Myles is the author of nineteen books including <em>I Must Be Living Twice: New &amp;Selected Poems</em>, and a reissue of <em>Chelsea Girls</em>, both out in fall 2015, from Ecco/Harper Collins. She is the recipient of a Guggenheim Fellowship in non-fiction, a Clark Award for Excellence in Art Writing, an Andy Warhol/Creative Capital art writers' grant, a Lambda Book Award, the Shelley Prize from The Poetry Society of America, as well as being named to the Slate/Whiting Second Novel List. Currently she teaches at NYU and Naropa University and lives in Marfa TX and New York. Read selections of her <a href="http://eileenmyles.com/living-twice.php">poetry</a> and <a href="http://eileenmyles.com/chelsea.php">fiction</a>.
-        </p>
-    </div>
-</div>
-
-
-<br><br><br>
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/betsy_2015.jpg" class="image img-responsive">
-    </div>
-
-    <div class="col-lg-9" class="left-align">
-        <p><h3 class="inline">Betsy Wheeler</h3> Betsy Wheeler is the author of the poetry collection <em>Loud Dreaming in a Quiet Room</em>, and the poetry chapbooks <em>Start Here</em>, and <em>Mental Detours</em>. She earned her MFA in poetry at The Ohio State University, and held the Stadler Fellowship at Bucknell University from 2005-2007. Managing Director of the Juniper Summer Writing Institute, she lives with her wife, Meghan, in Northampton, MA. Read some new poems <a href="http://bettermagazine.org/005/betsywheeler.html">here</a>,  or read an <a href="http://www.bucknell.edu/x81098.xml">interview</a>.</p><br>
-    </div>
-</div>
-
-<br><br><br>
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/dara_2015.jpg" class="image img-responsive">
-    </div>
-
-    <div class="col-lg-9" class="left-align">
-              <p><h3 class="inline">Dara Wier</h3>Dara Wier's 2013 <em>You Good Thing</em> was a BELIEVER'S reader's choice; she edits for factory hollow press and teaches workshops and seminars for the University of Massachusetts Amherst's MFA for Poets and Writers. Read an <a href="http://ampersandreview.com/2014/06/a-quick-interview-with-dara-wier/">interview</a>  or visit her blog <a href="http://www.flying-object.org/flying-object/inside-undivided-26">INSIDE UNDIVIDED</a> , about writing and reading.</p><br>
-    </div>
-</div>
-
-<br><br><br>
-<div class="row">
-    <div class="col-lg-3 text-center">
-        <img src="./images/faculty/matthew_2015.jpg" class="image img-responsive">
-    </div>
-
-    <div class="col-lg-9" class="left-align">
-              <p><h3 class='inline'>Matthew Zapruder</h3> Matthew Zapruder is the author of four collections of poetry, most recently <em>Come On All You Ghosts</em>, a New York Times Notable Book of the Year, and <em>Sun Bear</em>, Copper Canyon 2014. <em>Why Poetry</em>, a book of prose, is forthcoming from Ecco Press in 2016. He has received a Guggenheim Fellowship, a William Carlos Williams Award, a May Sarton Award from the Academy of American Arts and Sciences, and a Lannan Foundation Residency Fellowship in Marfa, TX. An Associate Professor in the St. Mary's College of California MFA program and English Department, he is also Editor at Large at Wave Books. He lives in Oakland, CA. Read his work <a href="http://www.poetryfoundation.org/bio/matthew-zapruder#about">here</a> or read an <a href="http://www.divedapper.com/interview/matthew-zapruder/">interview</a>.</p><br>
-    </div>
-</div>
-

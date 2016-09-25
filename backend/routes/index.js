@@ -54,6 +54,7 @@ router.post('/SetReading', function(req, res){
 
 router.get('/GetWriters', function(req, res){
 	db.GetWriters().then(function(results){
+		res.setHeader("Access-Control-Allow-Origin", "*");
 		res.json({success:true, WriterArray:results})
 	},
 	function(err){
