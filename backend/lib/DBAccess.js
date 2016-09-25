@@ -60,10 +60,38 @@ exports.SetWorkshopDetails = function(WriterName, WorkshopName, WorkshopDescript
 		)
 }
 
+exports.SetCraftSession = function(WriterName, CraftSessionName, CraftSessionDescription){
+
+	var craftSessionCreate = squel.insert()
+								.into("Craftsessions")
+								.set("CraftSessionName", CraftSessionName)
+								.returning("CraftSessionID")
+	return when.all([
+			query(craftSessionCreate),
+			selectWriterID(WriterName),
+			createContent(CraftSessionDescription)
+		]).spread(
+		function(craftsessionResults, writerID, contentID){
+			var writersToCraftSessions = squel.insert()
+										.into("WritersToCraftSessions")
+										.set("WriterID", writerID)
+										.set("CraftSessionID", craftsessionResults[0].craftsessionid);
+			var craftSessionsToContent = squel.update()
+										.table("CraftSessions")
+										.set("ContentID", contentID)
+										.where("CraftSessionID = ?", craftsessionResults[0].craftsesionid);
+			when.all([
+					query(writersToCraftSessions),
+					query(craftSessionsToContent)
+				])
+		});
+
+}
+
 
 
 //Takes image path and creates a new entry in image table
-function createImage(ImagePath){
+function createImage(ImagePath, callback){
 	var pictureInsert = squel.insert()
 			.into("Images")
 			.set("ImagePath", ImagePath)
@@ -73,24 +101,28 @@ function createImage(ImagePath){
 		]).then(
 			function(results){
 				return results[0].imageid;
-			}
-		);
+			},
+			function(err){
+				callback(err);
+			});
 }
 
 
 //Takes content description and creates a new entry in content table
-function createContent(Content){
+function createContent(Content, callback){
 	var contentInsert = squel.insert()
 			.into("Content")
 			.set("Description", Content)
 			.returning('contentid');
 	return when.all([
 		query(contentInsert),
-		]).spread(
+		]).then(
 			function(results){
 				return results[0].contentid;
-			}
-		);
+			},
+			function(err){
+				callback(err);
+			});
 }
 
 function selectWriterID(Name, callback){	

@@ -33,17 +33,23 @@ router.post('/SetWorkshop', function(req, res){
 	});
 });
 
-router.post('/SetCraftSesssion', function(req, res){
+router.post('/SetCraftSession', function(req, res){
 	var WriterName = req.body.WriterName;
 	var CraftSessionName = req.body.SessionName;
 	var CraftSessionDescription = req.body.SessionDescription;
-	SetCraftSesssion(WriterName, CraftSessionName, CraftSessionDescription);
+	db.SetCraftSession(WriterName, CraftSessionName, CraftSessionDescription).then(function(success){
+		res.json({success:true})
+	},
+	function(err){
+		
+		res.json({success:false, error:err.toString()});
+	});
 });
 
 router.post('/SetReading', function(req, res){
 	var WriterName = req.body.Name;
 	var ReadingDate = req.body.Date;
-	SetCraftSesssion(WriterName, ReadingDate);
+	SetReading(WriterName, ReadingDate);
 });
 
 router.get('/GetWriters', function(req, res){
@@ -57,7 +63,7 @@ router.get('/GetWriter', function(req, res){
 		res.json({info: WriterInfo})	
 	},
 	function(err){
-		res.json({error:err})
+		res.json({error:err[0]})
 	});
 	
 });

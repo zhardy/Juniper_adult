@@ -12,7 +12,6 @@ drop table if exists WritersToDetails CASCADE;
 drop table if exists WritersToCraftSessions CASCADE;
 drop table if exists WritersToReadings CASCADE;
 drop table if exists WritersToWorkshops CASCADE;
-drop table if exists CraftSessionsToContent CASCADE;
 drop table if exists WorkshopsToContent CASCADE;
 drop table if exists SponsorToDetails CASCADE;
 
@@ -35,9 +34,18 @@ create table Writers (
   primary key (WriterID)
 );
 
+create table Content (
+  ContentID serial,
+  Description varchar,
+  primary key (ContentID)
+);
+
+
 create table CraftSessions(
   CraftSessionID serial,
   CraftSessionName varchar,
+  ContentID int,
+  foreign key(ContentID) references Content,
   primary key (CraftSessionID)
 );
 
@@ -51,12 +59,6 @@ create table Workshops (
   WorkshopID SERIAL,
   WorkshopName varchar,
   primary key (WorkshopID)
-);
-
-create table Content (
-  ContentID serial,
-  Description varchar,
-  primary key (ContentID)
 );
 
 create table Images(
@@ -95,21 +97,13 @@ create table WritersToDetails(
 
 create table WritersToCraftSessions(
   WriterToCraftSessionID serial,
-  ContentID int,
+  CraftSessionID int,
   WriterID int,
-  foreign key (ContentID) references Content,
+  foreign key (CraftSessionID) references CraftSessions,
   foreign key (WriterID) references Writers,
   primary key (WriterToCraftSessionID)
 );
 
-create table WritersToReadings(
-  WritersToReadingID SERIAL,
-  WriterID int,
-  ReadingID int,
-  foreign key (WriterID) references Writers,
-  foreign key (ReadingID) references Readings,
-  primary key (WritersToReadingID)
-);
 
 create table WritersToWorkshops(
   WritersToWorkshopID SERIAL,
@@ -118,15 +112,6 @@ create table WritersToWorkshops(
   foreign key (WriterID) references Writers,
   foreign key (WorkshopID) references Workshops,
   primary key (WritersToWorkshopID)
-);
-
-create table CraftSessionsToContent(
-  CraftSessionToContentID serial,
-  CraftSessionID int,
-  ContentID int,
-  foreign key (CraftSessionID) references CraftSessions,
-  foreign key (ContentID) references Content,
-  primary key (CraftSessionToContentID)
 );
 
 create table WorkshopsToContent(
@@ -145,4 +130,13 @@ create table SponsorToDetails(
   foreign key (ContentID) references Content,
   foreign key (ImageID) references Images,
   primary key (SponsorToDetailID)
+);
+
+create table WritersToReadings(
+  WritersToReadingID SERIAL,
+  WriterID int,
+  ReadingID int,
+  foreign key (WriterID) references Writers,
+  foreign key (ReadingID) references Readings,
+  primary key (WritersToReadingID)
 );
