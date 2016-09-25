@@ -6,7 +6,7 @@ var when = require('when');
 
 query.connectionParameters = "postgres://test:test@localhost/test";
 
-function SetWriterDetails(Name, Type, Staffing, Content, ImagePath, Callback){
+exports.SetWriterDetails = function(Name, Type, Staffing, Content, ImagePath, Callback){
 	//Query inserting name and writer type into writers table and returning unique ID
 	var writerCreate = squel.insert()
 				.into("Writers")
@@ -14,7 +14,7 @@ function SetWriterDetails(Name, Type, Staffing, Content, ImagePath, Callback){
 				.set("WriterType", Type)
 				.returning('writerid');
 	//executing creation of writer query, and createImage and createContent helper functions all at once
-	when.all([
+	return when.all([
 		query(writerCreate),
 		createImage(ImagePath),
 		createContent(Content)
@@ -30,23 +30,35 @@ function SetWriterDetails(Name, Type, Staffing, Content, ImagePath, Callback){
 	});
 }
 
-// function SetWorkshopDetails(WriterName, WorkshopName, WorkshopDescription){
-// 	var workshopCreate = squel.insert()
-// 						.into("Workshops")
-// 						.set("WorkshopName", WorkshopName)
-// 						.returning("WorkshopID")
+exports.SetWorkshopDetails = function(WriterName, WorkshopName, WorkshopDescription){
+	var workshopCreate = squel.insert()
+						.into("Workshops")
+						.set("WorkshopName", WorkshopName)
+						.returning("WorkshopID")
 
-// 	when.all([
-// 			query(workshopCreate),
-// 			createContent(WorkshopDescription)
-// 			selectWriterID(WriterName)
-// 		]).spread(
-// 			function(workshopResults, contentID, writerID){
-// 				//insert into WriterstoWorkshops
-// 				//insert into WorkshopsToContent
-// 			}
-// 		)
-// }
+	return when.all([
+			query(workshopCreate),
+			createContent(WorkshopDescription),
+			selectWriterID(WriterName)
+		]).spread(
+			function(workshopResults, contentID, writerID){
+
+				var writerToWorkshop = squel.insert()
+										.into("WriterstoWorkshops")
+										.set("WriterID", writerID)
+										.set("WorkshopID", workshopResults[0].workshopid);
+
+				var workshopsToContent = squel.insert()
+											.into("WorkshopsToContent")
+											.set("WorkshopID", workshopResults[0].workshopid)
+											.set("ContentID", contentID)
+				when.all([
+						query(writerToWorkshop),
+						query(workshopsToContent)
+					]);
+			}
+		)
+}
 
 
 
@@ -56,7 +68,6 @@ function createImage(ImagePath){
 			.into("Images")
 			.set("ImagePath", ImagePath)
 			.returning('ImageID');
-	console.log(pictureInsert.toParam())
 	when.all([
 		query(pictureInsert),
 		]).then(
@@ -73,7 +84,7 @@ function createContent(Content){
 			.into("Content")
 			.set("Description", Content)
 			.returning('contentid');
-	when.all([
+	return when.all([
 		query(contentInsert),
 		]).spread(
 			function(results){
@@ -89,16 +100,12 @@ function selectWriterID(Name, callback){
 						.where("WriterName = ?", Name);
 	return when.all([
 		query(selectIDName)
-		])/*.resolve(
-		function(results){
-			return 'test';
-		}) */
+		]).then(function(result){
+			return result[0][0].writerid;
+		},
+		function(err){
+			callback(err);
+		});
 }
 
-function onResolve(something){
-	console.log(something);
-}
 
-SetWriterDetails("'drop tables;","'drop tables;","'drop tables;","'drop tables;", "'drop tables;");
-var test = 'nothing';
-selectWriterID('test').then(onResolve);
