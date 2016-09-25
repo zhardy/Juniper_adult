@@ -17,7 +17,7 @@ router.post('/SetWriter', function(req, res){
 		res.json({success:true})
 	},
 	function(err){
-		res.json({success:false, error:err})
+		res.json({success:false, error:err.toString()})
 	});
 });
 
@@ -29,7 +29,7 @@ router.post('/SetWorkshop', function(req, res){
 		res.json({success:true})
 	},
 	function(err){
-		res.json({success:false, error:err});
+		res.json({success:false, error:err.toString()});
 	});
 });
 

@@ -4,9 +4,9 @@ var query = require('pg-query');
 var pg = require('pg');
 var when = require('when');
 
-query.connectionParameters = "postgres://test:test@localhost/test";
+query.connectionParameters = "postgres://test:test@localhost/test"; 
 
-exports.SetWriterDetails = function(Name, Type, Staffing, Content, ImagePath, Callback){
+exports.SetWriterDetails = function(Name, Type, Staffing, Content, ImagePath){
 	//Query inserting name and writer type into writers table and returning unique ID
 	var writerCreate = squel.insert()
 				.into("Writers")
@@ -27,7 +27,10 @@ exports.SetWriterDetails = function(Name, Type, Staffing, Content, ImagePath, Ca
 					.set("ImageID", pictureID)
 					.set("WriterID", results[0].writerid);
 				query(detailsCreate)
-	});
+	},
+	function(err){
+			when.reject(err);
+		});
 }
 
 exports.SetWorkshopDetails = function(WriterName, WorkshopName, WorkshopDescription){
@@ -56,6 +59,9 @@ exports.SetWorkshopDetails = function(WriterName, WorkshopName, WorkshopDescript
 						query(writerToWorkshop),
 						query(workshopsToContent)
 					]);
+			},
+			function(err){
+				when.reject(err);
 			}
 		)
 }
@@ -84,6 +90,9 @@ exports.SetCraftSession = function(WriterName, CraftSessionName, CraftSessionDes
 					query(writersToCraftSessions),
 					query(craftSessionsToContent)
 				])
+		},
+		function(err){
+			when.reject(err);
 		});
 
 }
@@ -91,7 +100,7 @@ exports.SetCraftSession = function(WriterName, CraftSessionName, CraftSessionDes
 
 
 //Takes image path and creates a new entry in image table
-function createImage(ImagePath, callback){
+function createImage(ImagePath){
 	var pictureInsert = squel.insert()
 			.into("Images")
 			.set("ImagePath", ImagePath)
@@ -103,13 +112,14 @@ function createImage(ImagePath, callback){
 				return results[0].imageid;
 			},
 			function(err){
-				callback(err);
+
+				when.reject(err);
 			});
 }
 
 
 //Takes content description and creates a new entry in content table
-function createContent(Content, callback){
+function createContent(Content){
 	var contentInsert = squel.insert()
 			.into("Content")
 			.set("Description", Content)
@@ -121,11 +131,11 @@ function createContent(Content, callback){
 				return results[0].contentid;
 			},
 			function(err){
-				callback(err);
+				reject(err);
 			});
 }
 
-function selectWriterID(Name, callback){	
+function selectWriterID(Name){	
 	var selectIDName = squel.select()
 						.from("Writers")
 						.field("WriterID")
@@ -136,7 +146,7 @@ function selectWriterID(Name, callback){
 			return result[0][0].writerid;
 		},
 		function(err){
-			callback(err);
+			reject(err);
 		});
 }
 
