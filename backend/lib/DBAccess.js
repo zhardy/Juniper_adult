@@ -20,12 +20,14 @@ exports.SetWriterDetails = function(Name, Type, Staffing, Content, ImagePath){
 		createContent(Content)
 			]).spread(				//Taking all three unique IDs returned from queries and using them in the creation and execution of the final query
 			function(results, pictureID, contentID){
+				console.log(pictureID);
 				var detailsCreate = squel.insert()
 					.into("WritersToDetails")
 					.set("StaffingType", Staffing)
 					.set("ContentID", contentID)
 					.set("ImageID", pictureID)
 					.set("WriterID", results[0].writerid);
+					console.log(detailsCreate.toString());
 				query(detailsCreate)
 	},
 	function(err){
@@ -97,6 +99,32 @@ exports.SetCraftSession = function(WriterName, CraftSessionName, CraftSessionDes
 
 }
 
+exports.GetWriters = function(){
+	var getWriters = squel.select()
+						.from("Writers", "w")
+						.from("Content", "c")
+						.from("Images", "i")
+						.from("WritersToDetails", "wtd")
+						.field("WriterName", "Name")
+						.field("c.Description", "Bio")
+						.field("wtd.StaffingType", "Staffing")
+						.field("i.ImagePath", "Path")
+						.field("w.WriterType", "Type")
+						.where("wtd.ImageID = i.ImageID")
+						.where("wtd.WriterID = w.WriterID")
+						.where("wtd.ContentID = c.ContentID")
+	return when.all([
+		query(getWriters)
+		]).then(
+		function(results){
+			return results;
+		},
+		function(err){
+			when.reject(err);
+		});
+
+}
+
 
 
 //Takes image path and creates a new entry in image table
@@ -105,11 +133,11 @@ function createImage(ImagePath){
 			.into("Images")
 			.set("ImagePath", ImagePath)
 			.returning('ImageID');
-	when.all([
+	return when.all([
 		query(pictureInsert),
 		]).then(
 			function(results){
-				return results[0].imageid;
+				return results[0][0].imageid;
 			},
 			function(err){
 
@@ -128,7 +156,7 @@ function createContent(Content){
 		query(contentInsert),
 		]).then(
 			function(results){
-				return results[0].contentid;
+				return results[0][0].contentid;
 			},
 			function(err){
 				reject(err);
@@ -149,5 +177,4 @@ function selectWriterID(Name){
 			reject(err);
 		});
 }
-
 

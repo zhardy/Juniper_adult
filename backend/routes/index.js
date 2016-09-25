@@ -53,8 +53,12 @@ router.post('/SetReading', function(req, res){
 });
 
 router.get('/GetWriters', function(req, res){
-	var WriterArray = GetWriters();
-	res.json({array: WriterArray});
+	db.GetWriters().then(function(results){
+		res.json({success:true, WriterArray:results})
+	},
+	function(err){
+		res.json({success:false, error:err});
+	})
 });
 
 router.get('/GetWriter', function(req, res){
@@ -63,7 +67,7 @@ router.get('/GetWriter', function(req, res){
 		res.json({info: WriterInfo})	
 	},
 	function(err){
-		res.json({error:err[0]})
+		res.json({error:err.toString()})
 	});
 	
 });
