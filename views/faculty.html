@@ -9,13 +9,15 @@
     <div class="container" ng-repeat="facultyType in faculty">
             <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">{{facultyType.type}} Faculty</h2>
+                <h2 class="page-header">{{facultyType.type}}</h2>
             </div>
             <div class="writersContainers" ng-repeat="writer in facultyType.writers">
                 <div class="col-lg-3 text-center">
                     <img ng-src="{{writer.path}}" class="image img-responsive">
                 </div>
-                <div class="col-lg-9" class="left-align" ng-bind-html="writer.bio">      
+                <div class="col-lg-9" class="left-align">
+                    <h3 class="inline">{{writer.name}}</h3>
+                    <p ng-bind-html="writer.bio"></p>
                 </div>
             </div>
             </div>
@@ -24,7 +26,7 @@
 
     <br><br><br>
 
-
+<!-- 
         <div class="row">
             <div class="col-lg-3 text-center">
                 <img src="./images/faculty/emily_2015.jpg" class="image img-responsive">
@@ -259,7 +261,7 @@
             <div class="col-lg-9" class="left-align">
                       <p><h3 class='inline'>Matthew Zapruder</h3> Matthew Zapruder is the author of four collections of poetry, most recently <em>Come On All You Ghosts</em>, a New York Times Notable Book of the Year, and <em>Sun Bear</em>, Copper Canyon 2014. <em>Why Poetry</em>, a book of prose, is forthcoming from Ecco Press in 2016. He has received a Guggenheim Fellowship, a William Carlos Williams Award, a May Sarton Award from the Academy of American Arts and Sciences, and a Lannan Foundation Residency Fellowship in Marfa, TX. An Associate Professor in the St. Mary's College of California MFA program and English Department, he is also Editor at Large at Wave Books. He lives in Oakland, CA. Read his work <a href="http://www.poetryfoundation.org/bio/matthew-zapruder#about">here</a> or read an <a href="http://www.divedapper.com/interview/matthew-zapruder/">interview</a>.</p><br>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </div>
