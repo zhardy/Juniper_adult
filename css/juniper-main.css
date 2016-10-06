@@ -251,9 +251,6 @@ img.sidebar-logo{
     width:80px;
 }
 
-
-
-
 .apply-button:hover {
     color:red !important;
 
@@ -261,4 +258,8 @@ img.sidebar-logo{
 
 .name {
     display:inline;
+}
+
+#writerContainer{
+    padding-bottom: 70px;
 }

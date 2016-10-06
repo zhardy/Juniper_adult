@@ -11,7 +11,7 @@
             <div class="col-lg-12">
                 <h2 class="page-header">{{facultyType.type}}</h2>
             </div>
-            <div class="writersContainers" ng-repeat="writer in facultyType.writers">
+            <div class="row" id="writerContainer" ng-repeat="writer in facultyType.writers">
                 <div class="col-lg-2 text-center">
                     <img ng-src="{{writer.path}}" class="image img-responsive">
                 </div>
@@ -19,7 +19,6 @@
                     <h3 class="inline">{{writer.name}}</h3>
                     <p ng-bind-html="writer.bio"></p>
                 </div>
-                <br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br>
             </div>
             </div>
 
@@ -28,3 +27,4 @@
     
     </div>
 </div>
+
