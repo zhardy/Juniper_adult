@@ -1,1 +1,1 @@
-psql --file=db_architecture.sql --dbname=test --username=zack
+psql --file=db_architecture.sql --dbname=test --username=zhardy

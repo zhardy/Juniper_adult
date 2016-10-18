@@ -20,7 +20,7 @@ app.controller('FacultyController', ['$scope', function ($scope){
 								},
 								{
 									name: "Dara Wier",
-									bio: "Dara Wier&apos;s2013 <em>You Good Thing</em> was a BELIEVER'S reader's choice; she edits for factory hollow press and teaches workshops and seminars for the University of Massachusetts Amherst's MFA for Poets and Writers. Read an <a href='http://ampersandreview.com/2014/06/a-quick-interview-with-dara-wier/''>interview</a> or visit her blog <a href='http://www.flying-object.org/flying-object/inside-undivided-26'>INSIDE UNDIVIDED</a>, about writing and reading.",
+									bio: "Dara Wier&apos;s 2013 <em>You Good Thing</em> was a BELIEVER'S reader's choice; she edits for factory hollow press and teaches workshops and seminars for the University of Massachusetts Amherst's MFA for Poets and Writers. Read an <a href='http://ampersandreview.com/2014/06/a-quick-interview-with-dara-wier/''>interview</a> or visit her blog <a href='http://www.flying-object.org/flying-object/inside-undivided-26'>INSIDE UNDIVIDED</a>, about writing and reading.",
 									path:'./images/faculty/dara_2017.jpg'
 								}
 							]
@@ -63,13 +63,18 @@ app.controller('FacultyController', ['$scope', function ($scope){
 							writers:[
 								{
 									name: "Arda Collins",
-									bio: 'Arda Collins</b> is the author of a collection of poems, <em>It Is Daylight</em>, which was awarded the Yale Series of Younger Poets Prize. She is a recipient of the May Sarton Award from the American Academy of Arts and Sciences and holds a Ph.D. from the University of Denver. She teaches at Smith College as the Grace Hazard Conkling Writer-In-Residence and is a Special Issues Editor for <em>jubilat</em>. Read her thoughts on poetry and a sample of her work <a href="https://www.poetrysociety.org/psa/poetry/crossroads/new_american_poets/arda_collins/">here</a>.',
+									bio: 'Arda Collins is the author of a collection of poems, <em>It Is Daylight</em>, which was awarded the Yale Series of Younger Poets Prize. She is a recipient of the May Sarton Award from the American Academy of Arts and Sciences and holds a Ph.D. from the University of Denver. She teaches at Smith College as the Grace Hazard Conkling Writer-In-Residence and is a Special Issues Editor for <em>jubilat</em>. Read her thoughts on poetry and a sample of her work <a href="https://www.poetrysociety.org/psa/poetry/crossroads/new_american_poets/arda_collins/">here</a>.',
 									path: './images/faculty/arda_2017.jpg'
 								},
 								{
-									name:"Noy Holland",
-									bio: "Noy Holland's <em>I Was Trying to Describe What It Feels Like, New and Selected Stories </em>will be published by Counterpoint in January of 2017. Her debut novel <em>Bird </em>(Counterpoint) was released to critical acclaim in 2015. Her collections of short fiction and novellas include <em>Swim for the Little One First</em> (FC2), <em>What Begins with Bird</em> (FC2), and <em>The Spectacle of the Body (Knopf)</em>. She has published work in <em>The Kenyon Review</em>, <em>Conjunctions</em>, <em>The Quarterly</em>, <em>Antioch</em>, <em>The Believer</em>, and <em>NOON</em>, among many others. She was a recipient of a Massachusetts Cultural Council award for artistic merit and a National Endowment for the Arts Fellowship. She has taught for many years in the MFA for Poets and Writers at the University of Massachusetts, as well as at Phillips Andover and the University of Florida. She serves on the board of directors at Fiction Collective Two.  Visit her <a href='http://.noyholland.com/'>website</a> or read a <a href='http://www.conjunctions.com/webcon/holland12.htm'>story.</a></p>",
-									path: './images/faculty/noy_2017.jpg'
+									name:"Rachel B. Glaser",
+									bio: "Rachel B. Glaser is the author of the story collection <em>Pee on Water</em>, the poetry books <em>MOODS</em> and <em>Hairdo</em> (Song Cave spring 2017), and the novel <em>Paulina &amp; Fran</em>. She recently wrote a TV pilot and is working on several screenplays.",
+									path: './images/faculty/rachel_2017.jpg'
+								},
+								{
+									name:"Nathan Hill",
+									bio: "Nathan Hill&apos;s debut novel <em>The Nix</em> was a <em>New York Times</em> bestseller and named as one of the year&apos;s best books by Barnes &amp; Noble, Amazon, Powell&apos;s, IndieNext, <em>Entertainment Weekly</em>, and many others. <em>The Nix</em> will be published worldwide in more than 20 languages. Nathan received his MFA from the University of Massachusetts-Amherst. A native Iowan, he now lives in Naples, Florida.",
+									path:'/images/faculty/nathan_2017.jpg'
 								},
 								{
 									name:"Amy Leach",
