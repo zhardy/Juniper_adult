@@ -74,7 +74,7 @@ app.controller('FacultyController', ['$scope', function ($scope){
 								{
 									name:"Nathan Hill",
 									bio: "Nathan Hill&apos;s debut novel <em>The Nix</em> was a <em>New York Times</em> bestseller and named as one of the year&apos;s best books by Barnes &amp; Noble, Amazon, Powell&apos;s, IndieNext, <em>Entertainment Weekly</em>, and many others. <em>The Nix</em> will be published worldwide in more than 20 languages. Nathan received his MFA from the University of Massachusetts-Amherst. A native Iowan, he now lives in Naples, Florida.",
-									path:'/images/faculty/nathan_2017.jpg'
+									path:'./images/faculty/nathan_2017.jpg'
 								},
 								{
 									name:"Amy Leach",
