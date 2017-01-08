@@ -23,6 +23,9 @@ app.config(function ($routeProvider) {
     .when('/institute/admission', {
       templateUrl: 'views/admission.html'
     })
+    .when('/institute/enrolled', {
+      templateUrl: 'views/enrolled.html'
+    })
     .when('/sponsors', {
       templateUrl: 'views/sponsors.html'
     })
