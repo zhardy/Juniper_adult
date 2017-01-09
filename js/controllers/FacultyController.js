@@ -20,7 +20,10 @@ app.controller('FacultyController', ['$scope', function ($scope){
 								},
 								{
 									name: "Dara Wier",
-									bio: "Dara Wier&apos;s 2013 <em>You Good Thing</em> was a BELIEVER'S reader's choice; she edits for factory hollow press and teaches workshops and seminars for the University of Massachusetts Amherst's MFA for Poets and Writers. Read an <a href='http://ampersandreview.com/2014/06/a-quick-interview-with-dara-wier/''>interview</a> or visit her blog <a href='http://www.flying-object.org/flying-object/inside-undivided-26'>INSIDE UNDIVIDED</a>, about writing and reading.",
+									bio: "Dara Wier&apos;s 2013 <em>You Good Thing</em> was a BELIEVER'S reader's choice; she edits for factory hollow press and teaches workshops and seminars for the University \
+									of Massachusetts Amherst's MFA for Poets and Writers. Read more \
+									<a href='http://www.umass.edu/englishmfa/member/dara-wier-englishmfa'>here</a> or visit her blog \
+									<a href='http://www.flying-object.org/flying-object/inside-undivided-26'>INSIDE UNDIVIDED</a>, about writing and reading.",
 									path:'./images/faculty/dara_2017.jpg'
 								}
 							]
