@@ -9,21 +9,33 @@ app.controller('FacultyController', ['$scope', function ($scope){
 									path: './images/faculty/timothy_2017.jpg'
 								},
 								{
-									name: "Dorothea Lasky",
-									bio: "Dorothea Lasky is the author of four books of poetry, most recently <em>ROME</em> (W.W. Norton/Liveright, 2014), as well as <em>Thunderbird, Black Life, AWE</em>, all out from Wave Books. She is the co-editor of <em>Open the Door: How to Excite Young People About Poetry</em> (McSweeney&apos;s, 2013) and several chapbooks, including <em>Poetry is Not a Project </em>(Ugly Duckling Presse, 2010). Currently, she is an Assistant Professor of Poetry at Columbia University&apos;s School of the Arts, co-directs Columbia Artist/Teachers, and lives in New York City. Visit her <a href='http://www.dorothealasky.com/'>website</a> and read a recent <a href='https://www.loc.gov/poetry/interviews/dorothealasky.html'>interview</a>.",
-									path: './images/faculty/dottie_2017.jpg'
-								},
-								{
 									name: "Harryette Mullen",
 									bio: "Harryette Mullen teaches courses in African American literature, American poetry, and creative writing at UCLA. Her poems, short stories, and essays have been published widely and reprinted in over one hundred anthologies, including several published by Norton, Oxford, Cambridge, and Penguin presses. Her work has been selected four times for the <em>Best American Poetry</em> anthology series edited by David Lehman with guest editors A.R. Ammons, Robert Hass, Terrance Hayes, and Robert Pinsky. She is a recipient of a Jackson Poetry Prize, United States Artist Fellowship, Guggenheim Fellowship, Katherine Newman Award for Best Essay on Multi-Ethnic Literatures of the United States, and a Gertrude Stein Award for Innovative Poetry. Her poems have been translated into Spanish, French, German, Portuguese, Polish, Swedish, Danish, Turkish, Bulgarian, and Kyrgyz. She has published seven poetry books, including <em>Recyclopedia</em> (Graywolf, 2006), winner of a PEN Beyond Margins Award, and <em>Sleeping with the Dictionary</em> (University of California, 2002), a finalist for a National Book Award, National Book Critics Circle Award, and Los Angeles Times Book Prize. A collection of her essays and interviews, <em>The Cracks Between What We Are and What We Are Supposed to Be</em>, was published in 2012 by University of Alabama Press. Her most recent collection of poetry, <em>Urban Tumbleweed: Notes from a Tanka Diary</em>, was published by Graywolf Press in 2013. Read her <a href='https://www.poets.org/poetsorg/poem/tanka-diary'>recent work</a> and a selection of her <a href='http://epc.buffalo.edu/authors/mullen/'>writings</a>.",
 									path: './images/faculty/harryette_2017.jpg'
 								},
 								{
+									name: "Emily Pettit",
+									bio: "Emily Pettit is a poet, artist, editor and teacher, and the author of <em>Goat in the Snow</em>. She has taught and lectured at Columbia University, the University of Iowa, the University of Massachusetts, Elms College, and Smith College. Emily is an editor for Factory Hollow Press and <em>jubilat</em>.",
+									path: './images/faculty/emily_2017.jpg'
+								},
+								{
 									name: "Dara Wier",
-									bio: "Dara Wier&apos;s 2013 <em>You Good Thing</em> was a BELIEVER'S reader's choice; she edits for factory hollow press and teaches workshops and seminars for the University \
-									of Massachusetts Amherst's MFA for Poets and Writers. Read more \
-									<a href='http://www.umass.edu/englishmfa/member/dara-wier-englishmfa'>here</a> or visit her blog \
-									<a href='http://www.flying-object.org/flying-object/inside-undivided-26'>INSIDE UNDIVIDED</a>, about writing and reading.",
+									bio: "In 2014 THE BELIEVER named Dara Wier's <em>You Good Thing</em> a reader's choice book of the year. Forthcoming in fall \
+									2017 is <em>in the still of the night </em> from Wave Books which has been her publisher since the book length poem\
+									<em>Reverse Rapture</em>. Her poems have been awarded the American Poetry Review&rsquo;s Jerome Shestack Prize, a\
+									Guggenheim Foundation Fellowship, a National Endowment for the Arts fellowship, a Massachusetts Cultural Council Artists Award,\
+									and the San Francisco Poetry Center's Book of the Year Award; are included in the Pushcart Prize and Best American Poetry anthologies;\
+									  limited editions include (X IN FIX) and the big broadside <em>The Usual Ratio of Banality To Wonder</em> from RainTaxi&rsquo;s brainstorm series,\
+									<em>A Civilian's Diary of the War Years</em> from The Song Cave, and with James Tate, <em>The Lost Epic of Arthur \
+									Davidson Ficke, the Author&rsquo;s Annotations, Commentary, and Notes Of Reference For A Millennium&rsquo;s Teardrop</em> \
+									from Waiting for Godot Books. Recent poems can be found in Boston Review, Conduit, Volt, Plume, Poor Claudia, Bat City Review,\
+									 Divine Magnet, Epiphany, LITERATURA, Hyperallergic, an elsewhere. She's been a poet-in-residence at the University of Montana,\
+									  University of Texas, Emory University and the University of Utah; she was the 2005 Louis Rubin chair at Hollins University in Roanoke,\
+									   Virginia and is a member of the poetry faculty of the MFA Program for Poets and Writers at the University of Massachusetts Amherst. \
+									  She is a publisher and editor of the small independent press factory hollow press, and the literary magazine <em>jubilat.</em> \
+									  Along with Noy Holland she co-founded the Juniper Initiative for literary arts and action and the Juniper Summer Writing Institute and Workshops.\
+									   Dara Wier was born in New Orleans, Louisiana. A link to her on-going series about reading and writing is here,\
+									    <a href='http://insideundivided.tumblr.com'><em>INSIDE UNDIVIDED</em></a><em>.</em>",
 									path:'./images/faculty/dara_2017.jpg'
 								}
 							]
@@ -106,8 +118,22 @@ app.controller('FacultyController', ['$scope', function ($scope){
 								}
 
 							]
+						},
+						{
+							type:"Working Fellows",
+							writers: [
+								{
+									name:"JoAnna Novak",
+									bio:"JoAnna Novak is the author of <em>I Must Have You</em> (Skyhorse Publishing 2017) and <em>Noirmania</em> (forthcoming from Inside the Castle 2018). She has written fiction, essays, poetry, and criticism for publications including <em>Salon</em>, <em>Guernica</em>, <em>BOMB</em>, <em>The Rumpus</em>, <em>Conjunctions</em>, and <em>Joyland</em>. Her work has been nominated for the Pushcart Prize and Best of the Net Award. She received her MFA in fiction from Washington University and her MFA in poetry from University of Massachusetts Amherst. A co-founder of the literary journal and chapbook publisher, Tammy, she lives in Los Angeles. ",
+									path:"./images/faculty/joanna_2017.jpg"
+								},
+								{
+									name:"Henk Rossouw",
+									bio:"Originally from Cape Town, South Africa, Henk Rossouw's book-length poem Xamissa won the Poets Out Loud Editor's Prize and will be published in 2018 by Fordham University Press. An excerpt will be included in Best American Experimental Writing 2018 (Wesleyan University Press). His poems have come out in The Paris Review, The Massachusetts Review, and Boston Review, among other journals. He holds an MFA from the University of Massachusetts Amherst and a PhD in Literature and Creative Writing from the University of Houston, where he served as a poetry editor for Gulf Coast.  In the fall, Henk will teach as a visiting assistant professor in the University of Houston's Honors College.",
+									path:"./images/faculty/henk_2017.jpg"
+								}
+							]
 						}
 	]
-
 }
 ]);
