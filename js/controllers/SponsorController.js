@@ -38,11 +38,6 @@ app.controller('SponsorController', ['$scope', function ($scope){
 			description: "Ryan Williams, BFA, is the maestro of Four Wings Photography. Having been steeped in the Arts for the duration of his academic and professional career, his work is stand alone in its authenticity, innovative structure, and responsive style. Ryan is pleased to contribute his time photographing the Institute in exchange for supporting a young writer's tuition, and is grateful for the opportunity to support our creative community."
 		},
 		{
-			name:"Charles Hayden Foundation",
-			url:"http://www.charleshaydenfoundation.org/",
-			description: "The Charles Hayden Foundation seeks to promote the mental, moral and physical development of children and youth ages five to eighteen in the metropolitan area of New York and the City of Boston. Our focus is on those institutions and programs serving youth most at risk of not reaching their full potential, especially youth in low-income communities."
-		},
-		{
 			name:'<em>jubilat</em>',
 			url:"http://www.jubilat.org/jubilat/",
 			description:"<em>jubilat</em> is a literary journal that aims not only to publish the best in contemporary American poetry, but to place it alongside a varied selection of reprints, found pieces, lyric prose, art, and interviews with poets and other artists."
@@ -61,11 +56,6 @@ app.controller('SponsorController', ['$scope', function ($scope){
 			name:"J.E. and Marjorie B. Pittman Foundation and the Edwin L. and Elizabeth L. Skelton Foundation",
 			url:"",
 			description:"Supporting scholarships for poets to attend the Juniper Summer Writing Institute."
-		},
-		{
-			name:"Scholastic Awards Summer Scholarship Program",
-			url:"",
-			description:"The Scholastic Awards have partnered with many organizations, colleges, and institutes to offer students low-cost or free admission to some of the best summer art and writing programs across the country for teens."
 		},
 		{
 			name:'The University of Massachusetts Graduate School',

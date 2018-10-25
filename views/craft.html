@@ -1,165 +1,52 @@
-<br>
+<div ng-controller="CraftController">
 
-<div class="row">
-	<div class="col-lg-12 header">
-		<h1 class="page-header">Craft Sessions</h1>
+	<div class="row">
+		<div class="col-lg-12 header">
+			<h1 class="page-header">Craft Sessions</h1>
+		</div>
 	</div>
-</div>
 
-<div class="row">
+	<div class="row">
 
-        <div class="col-sm-4">
-        	<img src="./images/craft/craft-sessions-1.jpg" class="image img-responsive">
-        </div>
-
-
-        <div class="col-sm-4">
-        	<img src="./images/craft/craft-sessions-2.jpg" class="image img-responsive">
-        </div>
+	        <div class="col-sm-4">
+	        	<img src="./images/craft/craft-sessions-1.jpg" class="image img-responsive">
+	        </div>
 
 
-        <div class="col-sm-4">
-        	<img src="./images/craft/craft-sessions-3.jpg" class="image img-responsive">
-        </div>
-    </div>
-<br><br>
+	        <div class="col-sm-4">
+	        	<img src="./images/craft/craft-sessions-2.jpg" class="image img-responsive">
+	        </div>
 
-<div class="row">
-	<div class="col-sm-6 col-sm-offset-3 craft">
-		<p>
-			Morning craft sessions offer writers a chance to talk with faculty and writers in residence about varied topics of interest, writers’ lives, books, and matters of craft including techniques, themes, and forms. On alternating mornings, the Juniper community gathers for moderated Q&amp;As with the previous night’s readers. Together, craft sessions and Q&amp;As give Juniper participants numerous opportunities to engage with the Institute's distinguished faculty and writers in residence.
-		</p>
-		<p>
-			See below for craft session descriptions from summer 2017. Check back in January for Craft sessions for summer 2018!
-		</p> 
+
+	        <div class="col-sm-4">
+	        	<img src="./images/craft/craft-sessions-3.jpg" class="image img-responsive">
+	        </div>
+	    </div>
+	<br><br>
+
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3 craft">
+			<p>
+				Morning craft sessions offer writers a chance to talk with faculty and writers in residence about varied topics of interest, writers’ lives, books, and matters of craft including techniques, themes, and forms. On alternating mornings, the Juniper community gathers for moderated Q&amp;As with the previous night’s readers. Together, craft sessions and Q&amp;As give Juniper participants numerous opportunities to engage with the Institute's distinguished faculty and writers in residence.
+			</p>
+			<p>
+				See below for craft session descriptions from summer 2018.
+			</p> 
+		</div>
 	</div>
-</div>
-<br><br>
-<div class="row">
-	<div class="col-sm-8 col-sm-offset-2 text-center">
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="Poetry, Prose, and Scenarios with Arda Collins">
-			<p style="text-align:left">	Is it a poem or a paragraph? In our craft session we’ll talk about what, if anything, defines a prose poem vs. a paragraph in prose that identifies it as fiction or otherwise. We’ll look at examples from writers who call theirs prose stories and those who call theirs poems:  Baudelaire, Lydia Davis, Harryette Mullen, Francis Ponge, Robert Walser, Gertrude Stein, and others. What their work has in common is the exploration of an unfolding scenario. What is a scenario? That’s what we’ll find out together, and we’ll write some of our own.</p>
-   			</accordion-group>
-		</accordion>
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="The Very Long Sentence with Timothy Donnelly">
-			<p style="text-align:left">Together we’ll take a close look at a number of very long sentences in poetry and prose as we attempt to pin down and evaluate their various structural, musical, affective, psychological, mimetic, perceptual, cinematic, philosophical and other properties. What do we, as writers, gain by carrying on like this—and what do we sacrifice? Time will be set aside for participants to construct (or to begin constructing) their own very long sentences designed to travel great distances (spatial, temporal, conceptual, etc.) and whose subordinate clauses gesture not only towards the interconnectedness of seemingly disparate elements but even into the ineffable.</p>
-			</accordion-group>
-		</accordion>
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="The Art of Adaptation with Rachel Glaser and Nathan Hill">
-			    <p style="text-align:left">
-			    	Can screenwriting help edit a novel? Can novel-writing help envision a screenplay? Adapting a novel for the screen is a difficult and exciting process of mutation. The original narrative waves like an old friend as two characters meld into one, subplots are cut, and old characters speak bold new lines. Style is traded in for tension. Strangers and acquaintances get the final edit. Glaser and Hill will discuss their realizations, concerns, and experiences in adapting their work for the screen, collaborating with screenwriters and directors, and taking their first steps into the film world.
-			    </p>
-   			</accordion-group>
-		</accordion>
-
+	<br><br>
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2 text-center">
+			<div ng-repeat="craft in crafts">
 				<accordion close-others="oneAtATime" >
-			<accordion-group heading="Hook Lines with Stephen Graham Jones">
-			<p style="text-align:left">
-				With the first line of a piece of fiction, you're either telling the reader they have to read this, now, or you're telling them to wait, to trust me, this'll get interesting shortly. Which means you’re losing that reader. As you should. In here we'll run through the hooks you know and love, some you may not, and we'll group the like ones together, and try to identify what makes them work. If we have time, we'll talk about some hook line you've brought with you, from whatever you're writing right now.
-			</p>
-			</accordion-group>
-		</accordion>
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="Things Seen in Flowers: Poetry and the Occult Spring with Dorothea Lasky">
-			    <p style="text-align:left">Roses, daises, pansies, violets, sunflowers, lilies, buttercups, poppies, and peonies. Flowers are things that many poets use in their poems and we associate them with love, life, heath, and growth or the direct opposite of these ideas. But flowers in poems can mean other unexpected things, too. In this craft class, we will explore the multitude of weirdness and wonder in poems that contain flowers. We will read poems by William Blake, Bhanu Kapil, Toi Derricotte, Kenneth Koch, H.D., Pablo Neruda, Cornelius Eady, and Marilyn Chin, among others, which use flowers in strange and new ways. We will write our own poems too, inspired by these poets and sparked by some living and non-living flowers. And in doing all of this work, we will explore the great green mystery of life, which haunts us poets, which haunts all of us.</p>
-   			</accordion-group>
-		</accordion>
-		
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="On Prose Style with Paul Lisicky">
-			<p style="text-align:left">
-				Why does prose style matter? How do the various elements of craft—syntax, figuration, tone, paragraphing, and anything else you can think of—contribute to content? In this class, we’ll examine the prose of a handful of writers and talk about the ways in which style furnishes meaning. We'll also try out an exercise inspired by these excerpts in an effort to become better readers and writers, attuned to nuance, mystery.
-			</p>
-			</accordion-group>
-		</accordion>
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="Writing Lessons from Ovid with Amy Leach">
-			    <p style="text-align:left">
-			    	After the flood, the last two people on earth threw stones behind their shoulders, and the stones “gave up their hardness; their rigidness grew slowly soft and, softened, assumed a shape.”  In Ovid’s Metamorphoses, thrown stones turn into humans; the inert becomes animate; gods become animals and humans become plants.  We will read a few exciting passages from Ovid to learn about being flexible creators of changeable work, letting our ideas range and change from gods to cows, from maelstroms to woodpeckers; about how to free and resolve good ideas from the blind heap; and most of all, about how hard, rigid ideas can soften and assume living shapes. We will experiment with some new shapes, guided not by stony formulas but by plants and animals, always animate.
-			    </p>
-   			</accordion-group>
-		</accordion>
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="Translating the Arresting Moment with Sam Michel">
-				<p style="text-align:left">
-					Or: “I got this thing here in my chest, like an icepick in my lung, or my belly maybe, like a big hand took and squeezed me in the spleen, all my life, and I don’t know what it is or how to say it.”
-				</p>
-				<p style="text-align:left">
-					Or: “I’ve always wanted to write a book.”
-				</p>
-				<p style="text-align:left">
-					And: “I’m blocked.”
-				</p>
-			    <p style="text-align:left">
-			    	In this hour I mean to facilitate discussion about the simple question of why we have come to gather here. Such a discussion will require us to focus on the origin of our stories, the “arresting moment,” whether as a “blip on the radar,” or a “scene of catastrophe,” or a quieter, long-lived “psychic error.”  We will discuss the uniquely enduring capacity of words to present experience, and how a rigorous attention to the abstract, as well as the concrete quality of words can further narrative.  Through an examination of narratives as recursive systems, the hope here is to discover—in one hour!—several tools for sustaining the arduous task of writing the books we feel compelled to write, and to make those books rewarding reading in a culture seemingly striving to divorce itself from the reward in reading books.
-			    </p>
-   			</accordion-group>
-		</accordion>
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="The Unspeakable with Lydia Millet">
-			    <p style="text-align:left">
-			    	Between written words is space, which we as readers fill with our own instincts, our own nuances and fantasies and fears. We can’t help it. And the more powerful the words, the more powerful the space among them, the silence and the echo. Can we write in a way that might open a reader up to this mysterious subjective space, this ghost in the machine of language? Can we make sentences that suggest something beyond themselves — the terrible, the secret, the sublime? In this session we’ll take a brief walk, then try writing micro-texts — a sentence or a few sentences — that evoke the ghost that hovers beyond words. We’ll try to conjure an absent presence. All kinds of writers are welcome.
-
-			    </p>
-   			</accordion-group>
-		</accordion>
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="Poetry’s Impossible Dialogues with Harryette Mullen">
-			    <p style="text-align:left">We will experiment with the poetic possibilities of tropes such as apostrophe and prosopopoeia, considering how such practices have been employed by Romantic poets, ecopoets, and other contemporary writers to represent impossible dialogues. Such dialogues may seem impossible outside the poetic imagination, yet they allow us to expand the boundaries of poetry beyond self-expression while exploring our capacity for attention and empathy.</p>
-   			</accordion-group>
-		</accordion>
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="Making Silence Sing with Camille Rankine">
-				<p style="text-align:left">
-					“I think I am probably in love with silence, that other world. And that I write, in some way, to negotiate seriously with it.” – Jorie Graham, “Some Notes on Silence”
-				</p>
-			    <p style="text-align:left">How does the space of the page speak in a poem? Can empty spaces in a poem or narrative communicate as much as their words? How does a poem’s play with sound and silence create music, emotion, and help it tell its story? In this session, we’ll examine the various ways that writers play with the field of the page and negotiate with silence in line break, white space, fragments, the erased and the unspoken. Through reading, discussion and exercises, we’ll investigate how silence and space can operate as an active enriching presence, opening up a world of tension and electricity.</p>
-   			</accordion-group>
-		</accordion>
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="I Feel You: Writing 3-D Emotional Imagery with Arisa White">
-			    <p style="text-align:left">
-			    	What I consider to be a 3-D emotional image is one that is produced when the poet interrogates their inner and outer worlds and thus creates an incisive observation that is rooted in time. The 3-D emotional image allows you to locate and connect within yourself a similar state of being that wakes you up to the now. The image lives in you, instructing you on how to navigate and resource the social, political, emotional, and spiritual realms that bring us into being. So how can we create images that live on in our readers? In our time together we will read examples from such contemporary poets as Eugenia Leigh, Jamaal May, Morgan Parker, and Danez Smith, and engage in generative writing and embodiment activities that encourage feeling the full range of your emotions, mining memory, and reflecting on how you inhabit space.
-			    </p>
-   			</accordion-group>
-		</accordion>
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="You're the Boss of You: Doing What You're Told You Shouldn't Do with Dara Wier">
-			    <p style="text-align:left">
-			    	Why and when should clichés, stereotypes, melodrama, hyperbole, generalization, didacticism, anachronism, and other so-called cautions be faced or perhaps stared down? How does a writer know when to send caution to the wind? How does a writer know when to break some rules, take some chances, defy convention? When does any of this matter? How does a writer overcome timidity or good sense? And since judging one's own or someone else's writing typically comes couched in reason or rational discourse, how can a writer recognize reason's failures and rationality's limitations? How can we improve our conversations about these things and make use of them in our writing while taking good care of our minds? If you arrive to our gathering with a good example of a rule well broken, that would be welcome and helpful.
-			    </p>
-   			</accordion-group>
-		</accordion>
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="Making a Person with Tiphanie Yanique">
-			    <p style="text-align:left">As readers we often connect most to the people we are reading about. Lovely language, vibrant image, racing plot and rich scene might be beside the point if a reader doesn't feel connected to the character at the center of it all.  In this craft class we will study the ways that fiction writers and poets beautifully and authoritatively create character.  We will make people with care and place them as complex actors in their own narratives and verses.</p>
-   			</accordion-group>
-		</accordion>
-
-
-		<accordion close-others="oneAtATime" >
-			<accordion-group heading="What’s so indie about independent presses? with independent publishers">
-			    <p style="text-align:left">Patrick Thomas (Milkweed Editions), Hilary Plum (Rescue Press), and Chris Janke (Slope Editions) will discuss what makes indies different from other publishing houses, and how writers benefit when they seek out indie publishers, read and follow their lists. We’ll also discuss the climate for publication of emerging voices, via indie publishers and others.</p>
-   			</accordion-group>
-		</accordion>
-
-
+					<accordion-group heading="{{craft.title}} with {{craft.writer}}">
+						<p style="text-align:left" ng-bind-html="craft.description">
+						</p>
+			   		</accordion-group>
+				</accordion>
+			</div>
+		</div>
 	</div>
 </div>
-
 
 

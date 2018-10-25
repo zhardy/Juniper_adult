@@ -22,6 +22,15 @@ p {
     font-size: 110%; /* Needs to be 110. Figure out a way of making everything on faculty page 110% */
 }
 
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 300px solid transparent;
+  border-right: 300px solid transparent;
+  border-top: 300px solid #000;
+  position:absolute;
+}
+
 
 .social-symbols{
     text-align:center;
