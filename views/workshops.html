@@ -1,55 +1,40 @@
 <div ng-controller="WorkshopController">
-
 	<div class="row">
-
 		<div class="col-xs-12 header" >
 	        <h1 class="page-header">Workshops</h1>
 	    </div>
 	</div>
-		<div class="row">
-
-	        <div class="col-sm-4">
-	        	<img src="./images/workshop/workshops-1.jpg" class="image img-responsive"> 
-	        </div>
-
-
-	        <div class="col-sm-4">
-	        	<img src="./images/workshop/workshops-2.jpg" class="image img-responsive">
-	        </div>
-
-
-	        <div class="col-sm-4">
-	        	<img src="./images/workshop/workshops-3.jpg" class="image img-responsive">
-	        </div>
-	    </div>
-
-	<br><br>
-
-
 	<div class="row">
-
-		
+		<div class="col-sm-4">
+			<img src="./images/workshop/workshops-1.jpg" class="image img-responsive"> 
+		</div>
+		<div class="col-sm-4">
+			<img src="./images/workshop/workshops-2.jpg" class="image img-responsive">
+		</div>
+		<div class="col-sm-4">
+			<img src="./images/workshop/workshops-3.jpg" class="image img-responsive">
+		</div>
+	</div>
+	<br><br>
+	<div class="row">		
 		<div class="col-xs-6 col-xs-offset-3 ">
 	        <p>Workshops are at the heart of the Juniper Institute. Here, writers generate new work and present that work, or other work-in-progress, to their assigned faculty workshop leaders and peers. Workshop sizes are kept small so that every writer’s work gets dedicated attention. In addition to focusing on specific pieces of writing, writers actively interrogate larger issues of form, style, content, language, and process.</p>
 	        <p>Every workshop has its own climate and conventions: some lean toward the generation of new work, some toward the honing of existing pieces, and others emphasize a combination of both. While details are subject to revision, here's how the 2018 faculty describe their approach to their Juniper workshops.</p>
-
 	        <center><p>Click titles for descriptions:</p></center><br>
 	    </div>
-
 	</div>
 
 
 	<div class="row">
 		<div class="col-xs-6 col-xs-offset-3 text-center">
 			<div ng-repeat="workshop in workshops">
-			<accordion close-others="oneAtATime" >
+				<accordion close-others="oneAtATime" >
 					<accordion-group heading="{{workshop.type}} with {{workshop.writer}}">
-					<p style="text-align:left" ng-bind-html="workshop.description">
-					</p>
-		   			</accordion-group>
+						<p style="text-align:left" ng-bind-html="workshop.description">
+						</p>
+					</accordion-group>
 				</accordion>
 			</div>
-
 		</div>
 	</div>
 </div>
